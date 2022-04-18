@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Socket.IO chat</title>
+  <link rel="stylesheet" href="static/test.css" type="text/css" >
+  <script src="static/test.js"></script>
+  <style>
+    button{
+      margin:20px 0;
+    }
+    input{margin: 20px 0;}
+  </style>
+</head>
+<body>
+<ul id="messages"></ul>
+<h3 id="number"></h3>
+<form id="form" action="">
+  <input type="text" placeholder="房间号，为空则给所有人发" id="room"><button id="jointest">join 测试</button>
+  <div>
+    <textarea id="input" placeholder="命令" rows="10" cols="50"></textarea>
+  </div>
+<!--  <input id="input" type= placeholder="命令" autocomplete="off" />-->
+  <button>Send</button>
+</form>
+
+
+<script type="module">
+  import { io } from "https://cdn.socket.io/4.4.1/socket.io.esm.min.js";
+
+  const socket = io();
+
+  var messages = document.getElementById('messages');
+  var form = document.getElementById('form');
+  var input = document.getElementById('input');
+  var roomInput = document.getElementById('room');
+  var number = document.getElementById('number');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (input.value) {
+      socket.emit('message',roomInput.value, input.value);
+    }
+  });
+  socket.on('total', function(msg) {
+    console.log('total::',msg)
+    number.innerHTML = msg
+  });
+  socket.on('gettime', function(msg) {
+    console.log(msg)
+  });
+  document.getElementById('jointest').onclick = function (){
+    socket.emit('join',roomInput.value);
+  }
+</script>
+</body>
+</html>

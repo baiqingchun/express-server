@@ -1,0 +1,9 @@
+const MG = require('./mongo_base.js');
+const jwt = require('./jwt')
+exports.db = MG.db;
+exports.connectDB = MG.connectDB;
+exports.OnConnected = MG.OnConnected;
+exports.add_index = MG.add_index;
+exports.Schema = MG.Schema;
+exports.Mongolass = MG.Mongolass;
+exports.jwt = jwt
