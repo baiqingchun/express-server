@@ -12,7 +12,7 @@ yarn run start
 ## auth
 - jwt.js :token 验证，采用
 - mongo_base.js:mongo链接 基础文件
-— verify ：用户token 验证拦截，根据 token，再检查数据查看用户是否存在
+- verify ：用户token 验证拦截，根据 token，再检查数据查看用户是否存在
 ## base
 > 后台框架基础定义
 ## public
