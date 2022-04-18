@@ -1,11 +1,11 @@
 const MG = require('./db.js');
 let Test;
 const _jwt = require(process.cwd()+'/auth').jwt
-const _msg = require(process.cwd()+'/base').msg
+const _msg = require(process.cwd()+'/bin').msg
 MG.OnConnected(function () {
     Test = MG.db.Test
 });
-exports.setup = (app) => {
+exports.service = (app) => {
     app.get('/error', async function (req, res, next) {
         _msg.fail('400','no user',next)
     });

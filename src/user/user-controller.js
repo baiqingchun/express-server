@@ -4,7 +4,7 @@ const _jwt = require(process.cwd()+'/auth').jwt
 MG.OnConnected(function () {
     User = MG.db.User
 });
-exports.setup = (app) => {
+exports.service = (app) => {
     app.get('/user', async function (req, res, next) {
         res.send('user');
     });

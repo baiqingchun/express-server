@@ -1,6 +1,6 @@
 const DB = require('./mongo_base.js').db;
 const _jwt = require('./jwt.js')
-const _msg = require(process.cwd()+'/base').msg
+const _msg = require(process.cwd()+'/bin').msg
 const init = (app)=>{
     app.use(async (req, res, next) => {
         console.log('verify.js::' ,req.user)
@@ -14,7 +14,7 @@ const init = (app)=>{
 
     })
 }
-exports.setup = (app) => {
+exports.service = (app) => {
     _jwt.init(app)
     init(app)
 }

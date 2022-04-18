@@ -18,7 +18,7 @@ yarn run start
 ## public
 静态文件存储位置
 
-## routes
+## src
 > 后台逻辑文件，这个文件操作最多，有个两个例子目录，debug、user，如果后面要加逻辑，仿照这两个目录来写。
 - debug-service.js：逻辑文件，接口定义文件
 ```
@@ -70,7 +70,7 @@ exports.db = db;
 const http = require('http');
 const conn = require('./config.js').conn;
 const portserver = require('./config.js').portserver;
-const app = require(process.cwd() + '/base').setup_dev(['.'],
+const app = require(process.cwd() + '/bin').setup_dev(['.'],
     'GVR Server');
 const server = http.createServer(app);
 const socketIo = require('./socketio/index')
