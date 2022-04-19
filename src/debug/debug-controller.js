@@ -16,7 +16,7 @@ exports.service = (app) => {
     app.get('/test', async function (req, res, next) {
         await Test.insertOne({name: 'aaaa'})
         let list = await Test.find()
-        res.send(list);
+        _msg.pass('success',list,next)
     });
     app.post('/test2', async function (req, res, next) {
 

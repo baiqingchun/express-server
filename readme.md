@@ -1,5 +1,6 @@
 # express-server
-> 基于 express 的框架
+> 基于 express 的后台框架，原来的 express脚手架工具搭建的后台基础，并不是特别满意，所以开发这一套框架。
+> 该框架使用MongoDB数据库，应用程序体系结构开箱即用，该程序框架可扩展、松散耦合且易于维护。src 目录下有两个例子，可结合例子开发自己的后台，
 # 部署
 ```
 yarn install
@@ -85,3 +86,5 @@ server.listen(portserver, () => {
 
 ```
 ![image](./public/image/zan.jpg)
+# 有问题加qq
+1023968138
