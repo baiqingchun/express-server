@@ -60,7 +60,8 @@ exports.db = db;
 ```
 ## socketio
 > socketio后台定义，对应 public 下的message.html、 socketio.html
-
+http://localhost:3001/message.html
+http://localhost:3001/socketio.html
 ## config
 > 数据库连接目录，后台端口定义
 

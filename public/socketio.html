@@ -43,7 +43,7 @@
   });
   socket.on('total', function(msg) {
     console.log('total::',msg)
-    number.innerHTML = msg
+    number.innerHTML ='number：'+ msg
   });
   socket.on('gettime', function(msg) {
     console.log(msg)

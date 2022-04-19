@@ -14,7 +14,7 @@ exports.init = (app)=>{
             return null;
         }
     }).unless({
-        path: ['/login', '/signup','/user']  // 指定路径不经过 Token 解析
+        path: ['/login', '/signup','/user','/test']  // 指定路径不经过 Token 解析
     }))
 
 }
