@@ -11,7 +11,7 @@ yarn run start
 - 数据库：mongolass
 # 目录
 ## auth
-- jwt.js :token 验证，采用
+- jwt.js :token 验证，采用jsonwebtoken、express-jwt开源库.
 - mongo_base.js:mongo链接 基础文件
 - verify ：用户token 验证拦截，根据 token，再检查数据查看用户是否存在
 ## bin
